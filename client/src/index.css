@@ -1,0 +1,883 @@
+body {
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  background-image: url("https://content.presspage.com/uploads/1376/1920_internationalcricket2-587464.jpg?10000");
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: cursive, Geneva, Tahoma, sans-serif;
+}
+
+.topnav {
+  margin-top: 1vmax;
+  margin-bottom: 1vmax;
+  overflow: hidden;
+  /* background-color: rgba(255, 255, 255, 0.445); */
+}
+/* 
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+} */
+
+/* .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+} */
+.topnav button{
+  font-size: large;
+}
+
+#commentary{
+  display: none;
+}
+
+/* SCORING 5 */
+
+.scoring5{
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center; */
+  /* padding-left: 8rem; */
+}
+
+.bounceDiv{
+  /* position: relative; */
+  /* height: 100vh; */
+  color: yellowgreen;
+  text-align: center;
+  /* opacity: 0.5; */
+
+}
+.bounceDiv>h1{
+  padding: 20px;
+  background-color: rgba(8, 6, 7, 0.397);
+}
+
+.hide{
+  display: none;
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+.login{
+  /* background-image: url("https://bolnewsurdu.s3.amazonaws.com/urdu/wp-content/uploads/2021/12/babar-rizwan.jpg"); */
+  /* opacity: 0.9; */
+  background-color:#030a06b3;
+  color: white;
+  text-align: center;
+   /* padding: 6rem; */
+   border-radius: 20px;
+   box-shadow: 10px 10px 68px -3px rgba(255,255,255);
+
+}
+/* .beforeLogin{
+  background-image: url("https://bolnewsurdu.s3.amazonaws.com/urdu/wp-content/uploads/2021/12/babar-rizwan.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+.beforeLogin{
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 90vh;
+
+}
+
+.loginInput{
+  background-color: rgb(12, 110, 86);
+  border-radius: 10px;
+  text-align: center;
+}
+::placeholder{
+  color: rgb(215, 216, 216);
+  text-align: center;
+}
+table{
+  text-align: center;
+}
+td,th{
+  padding: 1rem;
+  border: 1px solid rgb(255, 245, 245);
+  
+}
+
+.signinFullBackjground{
+  background-image: url('https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/0660925f-5fc3-4df4-b54e-88fea66125d6_scaled.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.teamNames{
+  /* background-image: url("https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/0660925f-5fc3-4df4-b54e-88fea66125d6_scaled.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.teamNames input{
+  flex:6;
+  vertical-align: middle;
+  height: 3rem;
+  border-radius: 15px;
+  margin: 6px;
+  text-align: center;
+  background-color: #d9ece7;
+  padding: 0;
+}
+.link{
+  background-color: #dbd7df;
+  height: 2rem;
+  width: 6rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding-top: 4px;
+}
+.tossTable{
+  width: 100%;
+  /* height: 92vh; */
+}
+.tossTable td:nth-child(odd){
+  padding-left: 6rem;
+}
+.tossTable td:nth-child(even){
+  width: 25rem;
+  font-size: large;
+}
+.tossTable td:nth-child(even) button{
+  width: 9rem;
+  height: 3rem;
+  border-radius: 10px;
+  margin-left: 4px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.tossTable input{
+  width: 18rem;
+  border-radius: 7px;
+  height: 3rem;
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: large;
+}
+.tossTable th,td{
+  /* border: 2px solid rgb(214, 195, 195);
+  border-bottom: none; */
+  border: none;
+}
+.submitToss{
+  width: 5rem;
+  height: 3rem;
+}
+.selectPlayers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 100px;
+}
+.selectPlayers button{
+  width: 60%;
+  height: 3rem;
+  background-color: #a5d896;
+}
+.selectPlayers button:hover{
+  background-color: rgb(255, 255, 255);
+}
+.dismissals{
+  display: "flex"; 
+  flex-wrap: "wrap"; 
+  justify-content: "center";
+}
+.dismissals>button{
+  border: 5px solid black;
+  background-color: rgb(54, 88, 88);
+  color: white;
+}
+
+.separateInning table{
+  background-color: rgba(0, 0, 0, 0.63);
+  color: rgb(255, 255, 255);
+  font-size: larger;
+}
+.separateInningShowButton{
+  width: 300px;
+  background-color: rgba(59, 179, 46, 0.233);
+  color: rgb(255, 255, 255);
+  border-radius: 1em;
+  font-size: larger;
+  margin-right: 6px;
+}
+.separateInningShowButton:hover{
+  background-color: rgba(59, 179, 46, 1);
+}
+.scoringButtons{
+  text-align: center;
+}
+.scoringButtons>button{
+  height: 3rem;
+  width: 6rem;
+  font-size: large;
+}
+.batModal button{
+  border: 5px solid black;
+  background-color: rgb(54, 88, 88);
+  color: white;
+}
+.facerButton{
+  /* width: 5px; */
+  /* font-size: larger; */
+  /* height: 50px; */
+  flex:0.3;
+}
+.startButton{
+  background-color: #222020;
+  border: 4px solid black;
+  color: black;
+  border-radius: 1rem;
+  height: 3rem;
+  width: 8rem;
+  font-size: large;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+tr>span>button{
+  font-size: 25px;
+  margin-right: 10px;
+  background-color: transparent; 
+  border: none; 
+  color: white;
+}
+.panel{
+  display: none;
+}
+.commentModal{
+  /* border-radius: 50px; */
+}
+.commentModal>button{
+  width: 100px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: #222020;
+  color: white;
+}
+.commenttextarea{
+  border-radius: 40px;
+}
+textarea::placeholder{
+  text-align: center;
+}
+textarea{
+  text-align: center;
+}
+.fa-microphone {
+  font-size: 30px;
+}
+.fa-microphone-slash{
+  font-size:30px;
+}
+
+.spinner{
+  width: 500px;
+  height: 500px;
+  margin-left: 33%;
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inning1part2{
+  display: none;
+}
+.searchBox{
+  width: 300px;
+  height: 35px;
+}
+.searchBox::placeholder{
+  color: gray;
+}
+.scorecardorcommentary{
+  color: white;
+  background-color: #037e4ba4;
+}
+.scorecardorcommentary:hover{
+  color: white;
+  background-color: #037e4b;
+}
+
+/* width */
+/* ::-webkit-scrollbar {
+  width: 20px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+} */
+ 
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+} */
+
+.scroll{
+  width: 70vw;
+  height: 70vh;
+  overflow: auto
+}
+/* ::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+} */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 85, 0.562); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2ed844; 
+}
+.padleft{
+  padding-left: 9rem;
+}
+.separateInningColorButton{
+  background-color: rgba(59, 179, 46, 1);
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-repeat: repeat-y;
+  }
+  .container{
+    margin: 0;
+    padding: 0;
+  }
+  .scoringMedia {
+    width: 100vw;
+  }
+  .login{
+    /* width: 90vw; */
+    background-color:#030a06b3;
+    color: white;
+    text-align: center;
+     padding: 1rem 0 1rem 0;
+     border-radius: 20px;
+     box-shadow: 10px 10px 68px -3px rgba(255,255,255);
+  }
+  .fa-angle-double-right{
+    width: 50px;
+  }
+  .scoring2Media{
+    /* width: 100vw; */
+  }
+  .tossTable{
+    width: 100%;
+    /* height: 92vh; */
+  }
+  .tossTable td:nth-child(odd){
+    padding-left: 0rem;
+  }
+  .tossTable td:nth-child(even){
+    width: 0rem;
+    font-size: small;
+  }
+  .tossTable td:nth-child(even) button{
+    width: 6rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+  .tossTable input{
+    width: 100px;
+    border-radius: 7px;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: small;
+  }
+  .tossTable th,td{
+    /* border: 2px solid rgb(214, 195, 195);
+    border-bottom: none; */
+    border: none;
+  }
+  .login{
+    width: 100%;
+  }
+  .selectPlayers{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    padding-left: 0px;
+  }
+  .selectPlayers button{
+    width: 80%;
+    height: 3rem;
+    background-color: #a5d896;
+  }
+  .selectPlayers button:hover{
+    background-color: rgb(255, 255, 255);
+  }
+  .topnav button{
+    font-size: medium;
+  }
+
+  .scoringButtons{
+    text-align: center;
+  }
+  .scoringButtons>button{
+    height: 50px;
+    width: 90px;
+    font-size: medium;
+    margin-bottom: 10px;
+  }
+  .battingandbowlingtable{
+    flex-direction: column;
+  }
+  .batModal h1{
+    padding-top: 30px;
+  }
+  .batModal{
+    height: 100%;
+  }
+  .bowlerbutton{
+    border-radius: 10px;
+    font-size: small;
+    /* padding: 0; */
+  }
+  .bowlerbutton .img{
+    width: 6rem;
+    height: 5rem;
+    /* border: 10px solid black; */
+  }
+  .dismissals button img{
+    width: 9rem;
+    height: 9rem;
+  }
+  .outmodal>h1{
+    padding-top: 30px;
+  }
+  .batsmanbuttons{
+    border-radius: 18px;
+    font-size: small;
+    padding: 0;
+  }
+  .batsmanbuttons>img{
+    border-radius: 8px;
+    width: 6rem;
+    height: 6rem;
+  }
+  .allmatchestable{
+    
+
+  }
+  table{
+    text-align: center;
+  }
+  td,th{
+    padding: 0rem;
+    font-size: small;
+  }
+  #scorecard td,th{
+    padding: 0rem;
+    font-size: medium;
+  }
+  .tableBorder td,th{
+    border: 1px solid rgb(53, 160, 71);
+
+  }
+  td{
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .signinFullBackground input{
+    text-align: center;
+  }
+  .beforeLogin{
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 90vh;
+  }
+  .scoring2{
+    display: flex;
+     /* align-items: center; */
+     justify-content: center;
+     height: 100%;
+     /* width: auto; */
+  }
+  /* .login{
+    width: 100%;
+  } */
+
+  .loginInput{
+    width: auto; 
+    height: auto; 
+    border-radius: 8px; 
+    text-align: center;
+
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  .spinner{
+    width: 100px;
+    height:100px;
+    margin-left: 40%;
+    margin-top: 70%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+.lokgin{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  }
+  .padleft{
+    padding-left: 0;
+  }
+}
+
+
+
+
+
+.battingandbowlingtable{
+  display: flex;
+}
+.bowlerModal{
+  display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   flex-direction: row;
+   display: inline;
+
+}
+.bowlerbutton img{
+  width:10.1rem;
+   height:10.1rem;
+}
+.outmodal{
+  padding-top: 15px;
+  height: 100%;
+  background-color: ThreeDShadow;
+}
+.app{
+  text-align: center;
+   display: flex;
+   justify-content: center;
+
+}
+
+
+@media (max-width: 767px) and (min-width:575px) {
+  body {
+      background-color: orange;
+  }
+  .spinner{
+    width: 200px;
+    height:200px;
+    margin-left: 40%;
+    margin-top: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .recentMatch{
+    /* padding-left: 14rem; */
+  }
+  .container{
+    margin: auto;
+    padding: auto;
+  }
+  .login{
+    padding: 2rem 0 2rem 0;
+  }
+
+
+  .tossTable{
+    /* width: 100%; */
+    /* height: 92vh; */
+  }
+  .tossTable td:nth-child(odd){
+    padding-left: 0rem;
+  }
+  .tossTable td:nth-child(even){
+    width: 25rem;
+    font-size: large;
+  }
+  .tossTable td:nth-child(even) button{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+  .tossTable input{
+    width: 13rem;
+    border-radius: 7px;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: large;
+  }
+  .tossTable th,td{
+    /* border: 2px solid rgb(214, 195, 195);
+    border-bottom: none; */
+    border: none;
+  }
+}
+
+@media (max-width:988px) and (min-width:768px) {
+  body {
+      background-repeat: repeat-y;
+      background-color: red;
+  }
+  .scoringButtons>button{
+    margin-bottom: 10px;
+  }
+  .spinner{
+    width: 200px;
+    height:200px;
+    margin-left: 40%;
+    margin-top: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .recentMatch{
+    /* padding-left: 14rem; */
+  }
+  .container{
+    margin: auto;
+    padding: auto;
+  }
+  .login{
+    padding: 2rem 0 2rem 0;
+    /* width: 100vw; */
+  }
+
+  .tossTable{
+    /* width: 100%; */
+    /* height: 92vh; */
+  }
+  .tossTable td:nth-child(odd){
+    padding-left: 1rem;
+  }
+  .tossTable td:nth-child(even){
+    /* width: 0; */
+    font-size: large;
+  }
+  .tossTable td:nth-child(even) button{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+  .tossTable input{
+    width: 8rem;
+    border-radius: 7px;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: large;
+  }
+  .tossTable th,td{
+    /* border: 2px solid rgb(214, 195, 195);
+    border-bottom: none; */
+    border: none;
+  }
+  .dismissals button img{
+    width: 14rem;
+    height: 14rem;
+  }
+  .outmodal{
+    padding-top: 3rem;
+  }
+  .batsmanbuttons img{
+    width: 7rem;
+    height: 7rem;
+  }
+  .bowlerModal .bowlerbutton img{
+    width: 8rem;
+    height: 8rem;
+  }
+  .sign{
+    padding: 3rem;
+  }
+
+  .tossTable{
+    /* width: 100%; */
+    /* height: 92vh; */
+  }
+  .tossTable td:nth-child(odd){
+    padding-left: 0rem;
+  }
+  .tossTable td:nth-child(even){
+    width: 25rem;
+    font-size: large;
+  }
+  .tossTable td:nth-child(even) button{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+  .tossTable input{
+    width: auto;
+    border-radius: 7px;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: large;
+  }
+  .tossTable th,td{
+    /* border: 2px solid rgb(214, 195, 195);
+    border-bottom: none; */
+    border: none;
+  }
+
+}
+@media (min-width:989px) {
+  body {
+      background-repeat: repeat-y;
+      background-color: brown;
+  }
+  .scoringButtons>button{
+    margin-bottom: 10px;
+  }
+  .scoring2padding{
+    padding: 4rem;
+  }
+  /* .spinner{
+    width: 200px;
+    height:200px;
+    margin-left: 40%;
+    margin-top: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  } */
+  .recentMatch{
+    /* padding-left: 14rem; */
+  }
+  /* .container{
+    margin: auto;
+    padding: auto;
+  }
+  .login{
+    padding: 2rem 0 2rem 0;
+    width: 100vw;
+  } */
+
+  .tossTable{
+    /* width: 100%; */
+    /* height: 92vh; */
+  }
+  /* .tossTable td:nth-child(odd){
+    padding-left: 1rem;
+  } */
+  /* .tossTable td:nth-child(even){ */
+    /* width: 0; */
+    /* font-size: large; */
+  /* } */
+  /* .tossTable td:nth-child(even) button{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+  .tossTable input{
+    width: 8rem;
+    border-radius: 7px;
+    height: 3rem;
+    text-align: center;
+    margin-bottom: 4px;
+    font-size: large;
+  } */
+  /* .tossTable th,td{ */
+    /* border: 2px solid rgb(214, 195, 195);
+    border-bottom: none; */
+    /* border: none; */
+  /* } */
+  .dismissals button img{
+    width: 15rem;
+    height: 15rem;
+  }
+  .outmodal{
+    padding-top: 3rem;
+  }
+  .batsmanbuttons img{
+    width: 9rem;
+    height: 9rem;
+  }
+  .bowlerModal .bowlerbutton img{
+    width: 9rem;
+    height: 9rem;
+  }
+  .sign{
+    padding: 4rem;
+  }
+}

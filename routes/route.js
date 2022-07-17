@@ -3,6 +3,14 @@ const router = express.Router()
 
 const { create, show, signup, signin, deleteAll } = require("../controllers/post")
 
+
+
+router.get('/', (req, res) => {
+    res.send("hello world from server routerjs")
+})
+
+
+
 router.post("/post", create)
 // router.get("/b", (req, res) => {
 //     res.json(

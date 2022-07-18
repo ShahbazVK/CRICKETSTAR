@@ -66,7 +66,7 @@ export const Scoring4 = () => {
 
 
   useEffect(() => {
-    console.log(players1, "AND", players2);
+    // console.log(players1, "AND", players2);
     if (!inningcompleted) {
       players1.map((element, key) => {
 
@@ -155,15 +155,15 @@ export const Scoring4 = () => {
     }
     else if (bowlFirst === team1 && matchcompleted) {
       // outNotout2(howout)
-      console.log("ME TO CHAL RHA HNnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+      // console.log("ME TO CHAL RHA HNnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
       setplayer1Batsman(currentBattingTeamPlayers)
       setPlayer2Bowler(currentBowlingTeamPlayers)
-      console.log(player1Batsman);
-      console.log(currentBowlingTeamPlayers);
+      // console.log(player1Batsman);
+      // console.log(currentBowlingTeamPlayers);
     }
     if (matchcompleted) {
       setsecondInningstats({ overs: overs, balls: balls, score: score, wickets: wickets })
-      console.log("secondInningstats", secondInningstats);
+      // console.log("secondInningstats", secondInningstats);
       // const posting = () => {
       //   axios.post('http://localhost:8000/api/post', { message, player1Batsman, player2Batsman, player1Bowler, player2Bowler, team1, team2, tossWon, batFirst, target, score, bowlFirst, firstInningstats, secondInningstats })
       //     .then((response) => console.log(response))
@@ -179,7 +179,7 @@ export const Scoring4 = () => {
     currentBattingTeamPlayers.map((element, key) => {
       if (element[0] === batsmanNames.onStrike || element[0] === batsmanNames.runner) {
         element[3] = "Not out"
-        console.log("elemen1t", element)
+        // console.log("elemen1t", element)
       }
       return null
     })
@@ -304,7 +304,7 @@ export const Scoring4 = () => {
         // console.log("player2Bowlersoiodsoiso", currentBowlingTeamPlayers);
       }
       setbowlerName({ bowling: currentBowlerStat[0] })
-      console.log("bowlerName", bowlerName);
+      // console.log("bowlerName", bowlerName);
     }
 
 
@@ -352,7 +352,7 @@ export const Scoring4 = () => {
 
     const checkWin = (num = 0, out) => {
       if (inningcompleted && score + num >= target) {
-        console.log("won by chasing team");
+        // console.log("won by chasing team");
         setdisable(true)
         setmatchcompleted(true)
         z.classList.add('hide')
@@ -361,7 +361,7 @@ export const Scoring4 = () => {
         // navigate("/teamwon");
       }
       else if ((inningcompleted) && (score + num === target - 1) && ((overs === 4 && balls === 5) || (out + wickets === 10))) {
-        console.log("Tie");
+        // console.log("Tie");
         setdisable(true)
         setmatchcompleted(true)
         z.classList.add('hide')
@@ -370,7 +370,7 @@ export const Scoring4 = () => {
         // navigate("/teamwon");
       }
       else if (inningcompleted && ((overs === 4 && balls === 5) || (out + wickets === 10))) {
-        console.log("Won by first batting team");
+        // console.log("Won by first batting team");
         setdisable(true)
         setmatchcompleted(true)
         z.classList.add('hide')
@@ -445,7 +445,7 @@ export const Scoring4 = () => {
       }
     }
     else if (what === 'out') {
-      console.log("newBatter", newBatter)
+      // console.log("newBatter", newBatter)
       setnewBatter(null)
 
       setvisible3(true)
@@ -470,13 +470,13 @@ export const Scoring4 = () => {
 
       }
       // all Out
-      console.log("Chalo mere bhai1");
+      // console.log("Chalo mere bhai1");
       if (wickets + 1 === 10 && !inningcompleted) {
         setinningcompleted(true)
         setscoreByBall((prev) => [`1st inning between ${team1} && ${team2} is wrapped up.`, ...prev])
         // console.log("score + 1", score + 1);
         settarget(score + 1)
-        console.log("target", target);
+        // console.log("target", target);
         // // console.log("target", target);
         // if (batFirst === team1 && !inningcompleted) {
         //   // alert("inningcompletedinningcompletedinningcompleted1", inningcompleted);
@@ -502,7 +502,7 @@ export const Scoring4 = () => {
       }
 
       visible3 ? checkWin(0, 0) : checkWin(0, 1)
-      console.log("currentBattingTeamPlayers", currentBattingTeamPlayers);
+      // console.log("currentBattingTeamPlayers", currentBattingTeamPlayers);
 
     }
     else if (what === 'wide') {
@@ -665,7 +665,7 @@ export const Scoring4 = () => {
 
   const displayModal = () => {
     // if (batFirst === team1) {
-    console.log("new batter", newBatter)
+    // console.log("new batter", newBatter)
 
     return (
 
@@ -796,7 +796,7 @@ export const Scoring4 = () => {
           <Link href="#about">About</Link> */}
           </div>
           <div className='scoringButtons'>
-            <button disabled={disable} onClick={() => scoring('run', 0)} style={{ marginRight: '9px' }} className='btn btn-primary'>0</button>
+            <button type='button' disabled={disable} onClick={() => scoring('run', 0)} style={{ marginRight: '9px' }} className='btn btn-primary'>0</button>
             <button disabled={disable} onClick={() => scoring('run', 1)} style={{ marginRight: '9px' }} className='btn btn-primary'>1</button>
             <button disabled={disable} onClick={() => scoring('run', 2)} style={{ marginRight: '9px' }} className='btn btn-primary'>2</button>
             <button disabled={disable} onClick={() => scoring('run', 3)} style={{ marginRight: '9px' }} className='btn btn-primary'>3</button>

@@ -11,12 +11,12 @@ export const Scoring3 = () => {
   let { players1, players2, tossWon, opted, tossLost, team1, team2, teamAimages, teamBimages } = location.state
   const [batFirst, setbatFirst] = useState()
   const [bowlFirst, setbowlFirst] = useState()
-  const [batsmanNames, setbatsmanNames] = useState({ onStrike: players1[0], runner: players1[1] })
-  const [bowlerName, setbowlerName] = useState({ bowling: players2[9] })
+  const [batsmanNames, setbatsmanNames] = useState({ onStrike: "", runner: "" })
+  const [bowlerName, setbowlerName] = useState({ bowling: "" })
   const [player1, setplayer1] = useState(players1)
   const [player2, setplayer2] = useState(players2)
 
-  console.log(location.state);
+  // console.log(location.state);
   // var bat, bowl
 
   useEffect(() => {
@@ -65,7 +65,7 @@ export const Scoring3 = () => {
       else {
         setbatsmanNames(prev => { return { ...prev, ['runner']: a } })
       }
-      console.log(batsmanNames);
+      // console.log(batsmanNames);
     }
 
     const info3 = (opted1, opted2, players, team) => {
@@ -85,7 +85,7 @@ export const Scoring3 = () => {
               )
             })}
             {/* <button onClick={() => setfacerSelected(true)}>Facer</button> */}
-            {console.log("object")}
+            {/* {console.log("object")} */}
           </div>
         )
       }
@@ -102,7 +102,7 @@ export const Scoring3 = () => {
                 <div key={key}>
                   <ul><button style={{ backgroundColor: bowlerName.bowling === element ? "white" : "" }} onClick={() => {
                     setbowlerName({ ['bowling']: players[key] })
-                    console.log(bowlerName)
+                    // console.log(bowlerName)
                   }}>{element} </button><span style={{ color: "#e01507", fontSize: "20px" }} className={bowlerName.bowling === element ? "fas fa-baseball-ball" : ""}></span></ul>
 
                 </div>
@@ -135,7 +135,7 @@ export const Scoring3 = () => {
         batFirst === team1 ? teamAimages[0] = teamAimages[key] : teamBimages[0] = teamBimages[key]
         batFirst === team1 ? teamAimages[key] = tempimg : teamBimages[key] = tempimg
 
-        console.log(element, "===", batsmanNames.onStrike);
+        // console.log(element, "===", batsmanNames.onStrike);
       }
       else if (element === batsmanNames.runner) {
         let temp = player[1]
@@ -158,9 +158,9 @@ export const Scoring3 = () => {
     players1 = [...player1]
     players2 = [...player2]
 
-    console.log(players1)
-    console.log("AND");
-    console.log(players2)
+    // console.log(players1)
+    // console.log("AND");
+    // console.log(players2)
   }
 
   return (
@@ -171,6 +171,7 @@ export const Scoring3 = () => {
         {info2()}
         <div className='text-center'>
           <button className='startButton'><Link onClick={() => {
+            // console.log("CLICked")
             if (batsmanNames.onStrike === "" || batsmanNames.runner === "" || bowlerName.bowling === "") {
               toast.error("Select batters and bowler")
             }

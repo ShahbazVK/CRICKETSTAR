@@ -14,7 +14,7 @@ export const SignIn = () => {
     const handleChange = (change) => event => {
         if (change === 'email') setemail(event.target.value)
         else if (change === 'password') setpassword(event.target.value)
-        console.log(email, password);
+        // console.log(email, password);
     }
     const login = async () => {
         if (email && password) {
@@ -36,7 +36,7 @@ export const SignIn = () => {
 
         }
         else notify()
-        console.log("data", data);
+        // console.log("data", data);
     }
 
     return (

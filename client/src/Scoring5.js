@@ -17,10 +17,10 @@ export const Scoring5 = (props) => {
 
     batFirst === team1 ? player1Bowler = next === "save" ? currentBowlingTeamPlayers : props.player1Bowler : player2Bowler = next === "save" ? currentBowlingTeamPlayers : props.player2Bowler
     batFirst === team1 ? player2Batsman = next === "save" ? currentBattingTeamPlayers : props.player2Batsman : player1Batsman = next === "save" ? currentBattingTeamPlayers : props.player1Batsman
-    console.log("currentBattingTeamPlayers", currentBattingTeamPlayers)
-    console.log("currentBowlingTeamPlayers", currentBowlingTeamPlayers)
-    console.log("player2Batsman", player2Batsman);
-    console.log("player1bowler", player1Bowler);
+    // console.log("currentBattingTeamPlayers", currentBattingTeamPlayers)
+    // console.log("currentBowlingTeamPlayers", currentBowlingTeamPlayers)
+    // console.log("player2Batsman", player2Batsman);
+    // console.log("player1bowler", player1Bowler);
     let thisComment = 0
     const [inning1comments, setinning1comments] = useState(false)
     const [inning2comments, setinning2comments] = useState(false)

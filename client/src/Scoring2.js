@@ -23,7 +23,7 @@ export const Scoring2 = () => {
 
 
   const handleChange = (event, team, players, num) => {
-    console.log("eventt", event)
+    // console.log("eventt", event)
     // console.log(event.target.value);
     // console.log(players,team,num);
     if (team === props.team1) {
@@ -36,19 +36,19 @@ export const Scoring2 = () => {
       newArr[num] = event.target.value
       setplayers2(newArr)
     }
-    console.log(players);
+    // console.log(players);
   }
 
   const Playing11 = (team, players) => {
 
     const onImageChange = (event, num, team) => {
-      console.log(team, "=====", team1);
+      // console.log(team, "=====", team1);
       let newArr = (team === team1) ? [...teamAimages] : [...teamBimages]
-      console.log("hi hi hi");
-      console.log(event.target.files);
+      // console.log("hi hi hi");
+      // console.log(event.target.files);
       const [file] = event.target.files;
       newArr[num] = URL.createObjectURL(file);
-      console.log("newArr", newArr);
+      // console.log("newArr", newArr);
       team === team1 ? setteamAimages(newArr) : setteamBimages(newArr)
       newArr = []
       // newArr[]

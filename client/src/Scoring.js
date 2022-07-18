@@ -19,7 +19,7 @@ export const Scoring = () => {
       setteam2(event.target.value)
     }
   }
-  console.log(team1, team2);
+  // console.log(team1, team2);
   return (
     <FadeIn className='scoringMedia' transitionDuration={2000}>
       {localStorage.getItem("email") ?

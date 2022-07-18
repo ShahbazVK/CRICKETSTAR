@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     axios.get('http://localhost:8000/api/find')
       .then((response) => {
-        console.log(response)
+        // console.log(response)
         setdata(response.data)
       }
       )

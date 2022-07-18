@@ -6,7 +6,7 @@ export const RecentMatchIndividualInfo = () => {
     // const info = useParams()
     const location = useLocation()
     const { message, player1Batsman, player2Batsman, player1Bowler, player2Bowler, tossWon, team1, team2, batFirst, target, score, bowlFirst, firstInningstats, secondInningstats, scoreByBall } = location.state.element
-    console.log("location.state.element", location.state.element);
+    // console.log("location.state.element", location.state.element);
     // console.log("value", player2Batsman);
     // console.log(info);
     return (

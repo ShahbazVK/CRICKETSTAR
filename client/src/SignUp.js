@@ -11,13 +11,13 @@ export const SignUp = () => {
     const handleChange = (change) => (event) => {
         if (change === 'email') setemail(event.target.value)
         else if (change === 'password') setpassword(event.target.value)
-        console.log(email, password);
+        // console.log(email, password);
     }
     const register = () => {
         if (email && password && validate(email)) {
             axios.post('http://localhost:8000/api/signup', { email, password })
                 .then((resp) => {
-                    console.log("resp", resp)
+                    // console.log("resp", resp)
                     if (resp.data.error) toast.error(resp.data.error)
                     else {
                         toast.success("Account created.")

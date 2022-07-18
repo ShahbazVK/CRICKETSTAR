@@ -1,9 +1,9 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { Scoring5 } from './Scoring5';
 export const RecentMatchIndividualInfo = () => {
-    const info = useParams()
+    // const info = useParams()
     const location = useLocation()
     const { message, player1Batsman, player2Batsman, player1Bowler, player2Bowler, tossWon, team1, team2, batFirst, target, score, bowlFirst, firstInningstats, secondInningstats, scoreByBall } = location.state.element
     console.log("location.state.element", location.state.element);

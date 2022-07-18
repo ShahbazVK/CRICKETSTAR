@@ -5,7 +5,7 @@ import FadeIn from 'react-fade-in'
 
 
 export const Scoring3 = () => {
-  let newArr = []
+  // let newArr = []
   const [facerSelected, setfacerSelected] = useState(false)
   const location = useLocation();
   let { players1, players2, tossWon, opted, tossLost, team1, team2, teamAimages, teamBimages } = location.state
@@ -31,30 +31,30 @@ export const Scoring3 = () => {
   }, [])
 
 
-  const info1 = () => {
-    if (location.state.opted === 'bowl') {
-      // setbatFirst(location.state.tossLost)
-      // setbowlFirst(location.state.tossWon)
-      // bat = location.state.tossLost
-      // bowl = location.state.tossWon
-      return (
-        <h4>{batFirst} bat <br /> {bowlFirst} bowl</h4>
-      )
-    }
-    else {
-      // setbatFirst(location.state.tossWon)
-      // setbowlFirst(location.state.tossLost)
-      // let bat = location.state.tossWon
-      // let bowl = location.state.tossLost
-      return (
-        <div>
+  // const info1 = () => {
+  //   if (location.state.opted === 'bowl') {
+  //     // setbatFirst(location.state.tossLost)
+  //     // setbowlFirst(location.state.tossWon)
+  //     // bat = location.state.tossLost
+  //     // bowl = location.state.tossWon
+  //     return (
+  //       <h4>{batFirst} bat <br /> {bowlFirst} bowl</h4>
+  //     )
+  //   }
+  //   else {
+  //     // setbatFirst(location.state.tossWon)
+  //     // setbowlFirst(location.state.tossLost)
+  //     // let bat = location.state.tossWon
+  //     // let bowl = location.state.tossLost
+  //     return (
+  //       <div>
 
-          <h4>{batFirst} bat <br /> {bowlFirst} bowl</h4>
-          <h4>Select batters and bowlers</h4>
-        </div>
-      )
-    }
-  }
+  //         <h4>{batFirst} bat <br /> {bowlFirst} bowl</h4>
+  //         <h4>Select batters and bowlers</h4>
+  //       </div>
+  //     )
+  //   }
+  // }
 
   const info2 = () => {
 
@@ -146,6 +146,7 @@ export const Scoring3 = () => {
         batFirst === team1 ? teamAimages[1] = teamAimages[key] : teamBimages[1] = teamBimages[key]
         batFirst === team1 ? teamAimages[key] = tempimg : teamBimages[key] = tempimg
       }
+      return null
     })
     if (batFirst === team1) {
       console.log(batFirst, "===", team1);

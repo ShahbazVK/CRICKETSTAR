@@ -14,11 +14,11 @@ export const Scoring2 = () => {
   const [tossWon, settossWon] = useState('')
   const [tossLost, settossLost] = useState('')
   const [opted, setopted] = useState('')
-  const [Disabled, setDisabled] = useState(true)
-  const [flipOn, setflipOn] = useState(false)
+  // const [Disabled, setDisabled] = useState(true)
+  // const [flipOn, setflipOn] = useState(false)
   let team1 = props.team1
   let team2 = props.team2
-  let clickedTimes = 0
+  // let clickedTimes = 0
 
 
 
@@ -43,7 +43,7 @@ export const Scoring2 = () => {
 
     const onImageChange = (event, num, team) => {
       console.log(team, "=====", team1);
-      const newArr = (team === team1) ? [...teamAimages] : [...teamBimages]
+      let newArr = (team === team1) ? [...teamAimages] : [...teamBimages]
       console.log("hi hi hi");
       console.log(event.target.files);
       const [file] = event.target.files;

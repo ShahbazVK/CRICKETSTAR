@@ -1,6 +1,6 @@
 //kaam krleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import Modal from 'react-awesome-modal';
 import { Scoring5 } from './Scoring5';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
@@ -13,11 +13,11 @@ export const Scoring4 = () => {
   var z = document.getElementById('hide')
   // var a = document.getElementById('show')
   let newArr = []
-  let newArr1 = []
+  // let newArr1 = []
   let newArr2 = []
-  let newArr3 = []
+  // let newArr3 = []
   const location = useLocation();
-  const { players1, players2, tossWon, opted, tossLost, team1, team2, batFirst, bowlFirst, teamAimages, teamBimages } = location.state
+  const { players1, players2, tossWon, opted, team1, team2, batFirst, bowlFirst, teamAimages, teamBimages } = location.state
   const [bowlerName, setbowlerName] = useState(location.state.bowlerName)
   const [batsmanNames, setbatsmanNames] = useState(location.state.batsmanNames)
   // console.log("first",batsmanNames);
@@ -35,13 +35,13 @@ export const Scoring4 = () => {
   const [visible, setvisible] = useState(false)
   const [visible2, setvisible2] = useState(false)
   const [visible3, setvisible3] = useState(false)
-  const [afterOutSelection, setafterOutSelection] = useState('')
+  // const [afterOutSelection, setafterOutSelection] = useState('')
   const [currentBowlerStat, setcurrentBowlerStat] = useState([])
   const [bowlerIndex, setbowlerIndex] = useState(0)
   const [scoreByBall, setscoreByBall] = useState([`${bowlerName.bowling} is ready to ball the 1st over`])
   const [currentBattingTeamPlayers, setcurrentBattingTeamPlayers] = useState([])
   const [currentBowlingTeamPlayers, setcurrentBowlingTeamPlayers] = useState([])
-  const [lastBowler, setlastBowler] = useState(bowlerName.bowling)
+  // const [lastBowler, setlastBowler] = useState(bowlerName.bowling)
   const [target, settarget] = useState()
   const [matchcompleted, setmatchcompleted] = useState(false)
   const [message, setmessage] = useState()
@@ -55,9 +55,9 @@ export const Scoring4 = () => {
   const [newBowler, setnewBowler] = useState(null)
   const {
     transcript,
-    listening,
+    // listening,
     resetTranscript,
-    browserSupportsSpeechRecognition
+    // browserSupportsSpeechRecognition
   } = useSpeechRecognition();
   const [voiceCommentaryOn, setvoiceCommentaryOn] = useState(false)
   // const [howOut, sethowOut] = useState("")
@@ -72,7 +72,7 @@ export const Scoring4 = () => {
 
         newArr.push([element, 0, 0, null, 0, 0])
         // newArr1.push([element,0,0,0])
-
+        return null
       })
       setplayer1Batsman(newArr)
       // setplayer1Bowler(newArr1)
@@ -81,7 +81,7 @@ export const Scoring4 = () => {
 
         newArr2.push([element, 0, 0, null, 0, 0])
         // newArr3.push([element,0,0,0])
-
+        return null
       })
       setplayer2Batsman(newArr2)
     }
@@ -181,6 +181,7 @@ export const Scoring4 = () => {
         element[3] = "Not out"
         console.log("elemen1t", element)
       }
+      return null
     })
 
   }
@@ -191,6 +192,7 @@ export const Scoring4 = () => {
       if (element[0] === currentStriker) {
         element[3] = howOut + (howOut !== "Run out" ? currentBowlerStat[0] : "")
       }
+      return null
     })
     if (howOut !== "Run out") {
       let newState1 = [...currentBowlingTeamPlayers]
@@ -316,7 +318,7 @@ export const Scoring4 = () => {
         // console.log("bowlerIndex problem here", bowlerIndex); // yahn key console krke dekho
         keyVal = key
       }
-
+      return null
     })
     nextFunc(keyVal)
     // }
@@ -358,7 +360,7 @@ export const Scoring4 = () => {
         // a.classList.remove('hide')
         // navigate("/teamwon");
       }
-      else if ((inningcompleted) && (score + num === target - 1) && ((overs === 1 && balls === 5) || (out + wickets === 2))) {
+      else if ((inningcompleted) && (score + num === target - 1) && ((overs === 4 && balls === 5) || (out + wickets === 10))) {
         console.log("Tie");
         setdisable(true)
         setmatchcompleted(true)
@@ -367,7 +369,7 @@ export const Scoring4 = () => {
         // a.classList.remove('hide')
         // navigate("/teamwon");
       }
-      else if (inningcompleted && ((overs === 1 && balls === 5) || (out + wickets === 2))) {
+      else if (inningcompleted && ((overs === 4 && balls === 5) || (out + wickets === 10))) {
         console.log("Won by first batting team");
         setdisable(true)
         setmatchcompleted(true)
@@ -462,14 +464,14 @@ export const Scoring4 = () => {
 
 
       // outNotout2()
-      if (wickets + 1 !== 2) {
+      if (wickets + 1 !== 10) {
         setvisible(true)
         // alert("HI")
 
       }
       // all Out
       console.log("Chalo mere bhai1");
-      if (wickets + 1 === 2 && !inningcompleted) {
+      if (wickets + 1 === 10 && !inningcompleted) {
         setinningcompleted(true)
         setscoreByBall((prev) => [`1st inning between ${team1} && ${team2} is wrapped up.`, ...prev])
         // console.log("score + 1", score + 1);
@@ -543,7 +545,7 @@ export const Scoring4 = () => {
         setbowlerIndex(-1)
         setballs(6)
         setdisable(true)
-        if ((overs === 1 && balls === 5) || (what === "out" && wickets + 1 === 2)) {
+        if ((overs === 4 && balls === 5) || (what === "out" && wickets + 1 === 10)) {
 
           setTimeout(() => {
             setdisable(false)
@@ -580,7 +582,7 @@ export const Scoring4 = () => {
 
 
         //all Overs
-        if (overs === 1 && balls === 5 && !inningcompleted) {
+        if (overs === 4 && balls === 5 && !inningcompleted) {
           setinningcompleted(true)
           setscoreByBall((prev) => [`1st inning between ${team1} & ${team2} is wrapped up. ${bowlFirst} has to chase down the target of ${score + 1 + num} runs.`, ...prev])
 
@@ -693,7 +695,7 @@ export const Scoring4 = () => {
   }
 
   const newPlayerSelected = (abc) => {
-    setafterOutSelection(abc)
+    // setafterOutSelection(abc)
     setnewBatter(abc[0])
     // console.log("afterOutSelection", afterOutSelection);
     // console.log("new player selected function")
@@ -701,12 +703,12 @@ export const Scoring4 = () => {
       // console.log("if");
       setbatsmanNames((prev) => ({ ...prev, ['onStrike']: abc[0] }))
 
-      setafterOutSelection('')
+      // setafterOutSelection('')
     }
     else if (currentStriker === batsmanNames.runner) {
       // console.log("else");
       setbatsmanNames((prev) => ({ ...prev, ['runner']: abc[0] }))
-      setafterOutSelection('')
+      // setafterOutSelection('')
     }
     // console.log("batsmanNames7", batsmanNames);
 
@@ -750,12 +752,12 @@ export const Scoring4 = () => {
   const howOutModal = () => {
     return (
       <div className='dismissals'>
-        <button style={{ backgroundColor: howout === "(Caught):" ? "#2b3811" : "" }} onClick={() => outNotout2("(Caught):")}><img width={"300rem"} height={"270rem"} src="https://i.gifer.com/Pyxi.gif" /><br />Caught</button>
-        <button style={{ backgroundColor: howout === "(Bowled) " ? "#2b3811" : "" }} onClick={() => outNotout2("(Bowled) ")}><img width={"300rem"} height={"270rem"} src='https://thumbs.gfycat.com/JubilantNervousAquaticleech.webp' /><br />Bowled</button>
-        <button style={{ backgroundColor: howout === "(Run out)" ? "#2b3811" : "" }} onClick={() => outNotout2("(Run out)")}><img width={"300rem"} height={"270rem"} src='https://i.gifer.com/Caav.gif' /><br />Run out</button>
-        <button style={{ backgroundColor: howout === "(LBW) " ? "#2b3811" : "" }} onClick={() => outNotout2("(LBW) ")}><img width={"300rem"} height={"270rem"} src='https://cdn.analyticsvidhya.com/wp-content/uploads/2020/03/cricket_ball_tracking.gif' /><br />LBW</button>
-        <button style={{ backgroundColor: howout === "(Hit wicket)" ? "#2b3811" : "" }} onClick={() => outNotout2("(Hit wicket)")}><img width={"300rem"} height={"270rem"} src='http://1.bp.blogspot.com/-EZVUAGQT-gE/U55J3fn8dMI/AAAAAAAAEbo/sniMM07x-2I/s1600/NuwanX2.gif' /><br />Hit wicket</button>
-        <button style={{ backgroundColor: howout === "(Stump) " ? "#2b3811" : "" }} onClick={() => outNotout2("(Stump) ")}><img width={"300rem"} height={"270rem"} src='https://thumbs.gfycat.com/DiscreteWindyCurassow.webp' /><br />Stump</button>
+        <button style={{ backgroundColor: howout === "(Caught):" ? "#2b3811" : "" }} onClick={() => outNotout2("(Caught):")}><img width={"300rem"} alt="" height={"270rem"} src="https://i.gifer.com/Pyxi.gif" /><br />Caught</button>
+        <button style={{ backgroundColor: howout === "(Bowled) " ? "#2b3811" : "" }} onClick={() => outNotout2("(Bowled) ")}><img width={"300rem"} alt="" height={"270rem"} src='https://thumbs.gfycat.com/JubilantNervousAquaticleech.webp' /><br />Bowled</button>
+        <button style={{ backgroundColor: howout === "(Run out)" ? "#2b3811" : "" }} onClick={() => outNotout2("(Run out)")}><img width={"300rem"} alt="" height={"270rem"} src='https://i.gifer.com/Caav.gif' /><br />Run out</button>
+        <button style={{ backgroundColor: howout === "(LBW) " ? "#2b3811" : "" }} onClick={() => outNotout2("(LBW) ")}><img width={"300rem"} alt="" height={"270rem"} src='https://cdn.analyticsvidhya.com/wp-content/uploads/2020/03/cricket_ball_tracking.gif' /><br />LBW</button>
+        <button style={{ backgroundColor: howout === "(Hit wicket)" ? "#2b3811" : "" }} onClick={() => outNotout2("(Hit wicket)")}><img width={"300rem"} alt="" height={"270rem"} src='http://1.bp.blogspot.com/-EZVUAGQT-gE/U55J3fn8dMI/AAAAAAAAEbo/sniMM07x-2I/s1600/NuwanX2.gif' /><br />Hit wicket</button>
+        <button style={{ backgroundColor: howout === "(Stump) " ? "#2b3811" : "" }} onClick={() => outNotout2("(Stump) ")}><img width={"300rem"} alt="" height={"270rem"} src='https://thumbs.gfycat.com/DiscreteWindyCurassow.webp' /><br />Stump</button>
       </div>
     )
   }
@@ -834,6 +836,7 @@ export const Scoring4 = () => {
                       newArr[key] = temp
                       setcurrentBattingTeamPlayers(newArr)
                     }
+                    return null
                   })
                   setvisible(false)
 
@@ -903,7 +906,7 @@ export const Scoring4 = () => {
 
                     <button onClick={() => {
                       SpeechRecognition.stopListening()
-                      { setcommenttextarea(transcript) }
+                      setcommenttextarea(transcript)
                       console.log("Clicked")
                       setvoiceCommentaryOn(false)
                       return (

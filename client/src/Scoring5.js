@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fadeIn } from 'react-animations';
-import Radium, { StyleRoot } from 'radium';
+import Radium from 'radium';
 import axios from 'axios'
 import FadeIn from 'react-fade-in'
 
@@ -41,7 +41,7 @@ export const Scoring5 = (props) => {
                 .catch((err) => console.log(err))
         }
         if (next === "save") posting()
-    }, [])
+    }, [message, player1Batsman, player2Batsman, player1Bowler, player2Bowler, team1, team2, tossWon, batFirst, target, score, bowlFirst, firstInningstats, wickets, overs, balls, next, secondInningstats, currentBowlingTeamPlayers, currentBattingTeamPlayers, email, scoreByBall])
 
 
     // $(document).ready(function () {
@@ -125,7 +125,7 @@ export const Scoring5 = (props) => {
                                     </tbody>
                                 </table>
                                 <h1>{bowlFirst}</h1>
-                                <table class="table table-sm">
+                                <table className="table table-sm">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -172,7 +172,7 @@ export const Scoring5 = (props) => {
                                     else if (key >= thisComment) {
                                         return <h4 style={{ color: "#afe0c5" }}>{element}</h4>
                                     }
-
+                                    return null
 
                                 })}
                             </div>
@@ -187,7 +187,7 @@ export const Scoring5 = (props) => {
                                 inning2comments ? setinning2comments(false) : setinning2comments(true)
                             }} className='btn scorecardorcommentary'>{inning2comments ? <span>Scorecard</span> : <span>Commentary</span>}</button> </h4>
                             <div id='inning2'>
-                                <table class="table table-sm">
+                                <table className="table table-sm">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -216,7 +216,7 @@ export const Scoring5 = (props) => {
                                     </tbody>
                                 </table>
                                 <h1>{batFirst}</h1>
-                                <table class="table table-sm">
+                                <table className="table table-sm">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -262,7 +262,7 @@ export const Scoring5 = (props) => {
                                     else if (key < thisComment) {
                                         return <h4 style={{ color: "#afe0c5" }}>{element}</h4>
                                     }
-
+                                    return null
                                 })}
                             </div>
                         </div>

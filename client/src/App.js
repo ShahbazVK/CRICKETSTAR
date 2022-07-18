@@ -70,24 +70,24 @@ const App = () => {
                           </tr> : ""
                       )
                     }
-
+                    return null
                   })}
                 </table>
               </div>
             </div>
             <nav aria-label="...">
-              <ul class="pagination">
-                <li class="page-item">
+              <ul className="pagination">
+                <li className="page-item">
                   <button disabled={pageLowest <= 0 ? true : false} style={{ color: pageLowest <= 0 ? 'gray' : "" }} onClick={() => {
                     setpageHighest(pageHighest - 9)
                     setpageLowest(pageLowest - 9)
-                  }} class="page-link">Previous</button>
+                  }} className="page-link">Previous</button>
                 </li>
-                <li class="page-item">
+                <li className="page-item">
                   <button disabled={pageHighest >= data.length ? true : false} style={{ color: pageHighest >= data.length ? 'gray' : "" }} onClick={() => {
                     setpageHighest(pageHighest + 9)
                     setpageLowest(pageLowest + 9)
-                  }} class="page-link" href="#">Next</button>
+                  }} className="page-link" href="#">Next</button>
                 </li>
               </ul>
             </nav>

@@ -1,4 +1,4 @@
-import React, { timeout, useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import FadeIn from 'react-fade-in';
 
@@ -40,7 +40,7 @@ export const Scoring = () => {
                     <input onChange={handleChange('team2')} value={team2} type="text" placeholder='Enter Team 2 name' />
                     {/* <input style={{ flex: "1" }} type="color" /> */}
                   </div>
-                  <Link className='link' to={`/scoring/${team1}-vs-${team2}`}><i class="fas fa-angle-double-right"></i></Link>
+                  <Link className='link' to={`/scoring/${team1}-vs-${team2}`}><i className="fas fa-angle-double-right"></i></Link>
                 </div>
 
                 {/* <Scoring2 /> */}

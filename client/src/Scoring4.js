@@ -5,6 +5,7 @@ import Modal from 'react-awesome-modal';
 import { Scoring5 } from './Scoring5';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import FadeIn from 'react-fade-in/lib/FadeIn';
+import { Zoom } from 'react-reveal'
 
 
 export const Scoring4 = () => {
@@ -53,6 +54,7 @@ export const Scoring4 = () => {
   const [howout, sethowout] = useState("")
   const [newBatter, setnewBatter] = useState(null)
   const [newBowler, setnewBowler] = useState(null)
+  const [hideall, sethideall] = useState(false)
   const {
     transcript,
     // listening,
@@ -473,6 +475,7 @@ export const Scoring4 = () => {
       // console.log("Chalo mere bhai1");
       if (wickets + 1 === 10 && !inningcompleted) {
         setinningcompleted(true)
+        sethideall(true)
         setscoreByBall((prev) => [`1st inning between ${team1} && ${team2} is wrapped up.`, ...prev])
         // console.log("score + 1", score + 1);
         settarget(score + 1)
@@ -584,6 +587,7 @@ export const Scoring4 = () => {
         //all Overs
         if (overs === 4 && balls === 5 && !inningcompleted) {
           setinningcompleted(true)
+          sethideall(true)
           setscoreByBall((prev) => [`1st inning between ${team1} & ${team2} is wrapped up. ${bowlFirst} has to chase down the target of ${score + 1 + num} runs.`, ...prev])
 
           // console.log("score + 1", score + 1);
@@ -768,7 +772,7 @@ export const Scoring4 = () => {
 
   return (
     <FadeIn transitionDuration={1300}>
-      <div className='login'>
+      <div style={{ display: hideall ? 'none' : "block" }} className='login'>
         <div id='hide'>
 
           <div>
@@ -1032,6 +1036,23 @@ export const Scoring4 = () => {
         </div>
         {MatchCompleteFunc()}
 
+      </div>
+      <div style={{ display: hideall ? "block" : "none" }}>
+
+        <Zoom>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", flexDirection: "column" }} className='login'>
+            <div style={{ display: "none" }}>
+              {hideall ? setTimeout(() => {
+                sethideall(false)
+              }, 6000) : ""
+              }
+            </div>
+            <h1>{batFirst} has made a total of <span style={{ color: "yellowgreen" }}>{target - 1} runs.</span></h1>
+            <h1>Now its time for {bowlFirst} to chase down the target in 20 overs.</h1>
+            <h2>Moving towards the 2nd inning....</h2>
+          </div>
+
+        </Zoom>
       </div>
     </FadeIn>
   )

@@ -12,7 +12,7 @@ const App = () => {
   useEffect(() => {
     axios.get('http://localhost:8000/api/find')
       .then((response) => {
-        // console.log(response)
+        console.log(response)
         setdata(response.data)
       }
       )
@@ -33,11 +33,11 @@ const App = () => {
     }
     return (
       <FadeIn className='scoring2' transitionDuration={2500}>
-        <div style={{ paddingTop: "1rem" }} className='container login padleft'>
+        <div style={{ paddingTop: "1rem" }} className='container login padleft apppadbottom'>
           <div>
             <div>
               <h2>Recent matches</h2>
-              <input className='searchBox' onChange={handleChange} value={search} style={{ borderRadius: "5px" }} type="search" placeholder='Search by scorer name' name="" id="" />
+              <input className='searchBox' onChange={handleChange} value={search} style={{ borderRadius: "5px" }} type="search" placeholder='Search by scorer email' name="" id="" />
               <br />
               <hr />
               <div className='scrooll'>

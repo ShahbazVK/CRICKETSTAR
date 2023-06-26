@@ -113,7 +113,7 @@ export const Scoring2 = () => {
                   setopted('bowl')
                 }}>BOWLING</button>
                 <br />
-                <button className='submitToss'><Link style={{ pointerEvents: tossWon !== "" && opted !== "" ? "" : "none", color: tossWon !== "" && opted !== "" ? "" : "gray" }} to={'/scoringstarts'} state={{ players1, players2, tossWon, opted, tossLost, team1, team2, teamAimages, teamBimages }}>Submit Details</Link></button>
+                <button className='submitToss'><Link style={{ pointerEvents: tossWon !== "" && opted !== "" ? "" : "none", color: tossWon !== "" && opted !== "" ? "" : "gray" }} to={'/scoringstarts'} state={{ players1, players2, tossWon, opted, tossLost, team1, team2, teamAimages, teamBimages }}>Submit Toss</Link></button>
               </td>
               <td>{Playing11(props.team2, players2)}</td>
             </tr>

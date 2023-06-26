@@ -5,7 +5,6 @@ import Modal from 'react-awesome-modal';
 import { Scoring5 } from './Scoring5';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import FadeIn from 'react-fade-in/lib/FadeIn';
-import { Zoom } from 'react-reveal'
 
 
 export const Scoring4 = () => {
@@ -1039,7 +1038,7 @@ export const Scoring4 = () => {
       </div>
       <div style={{ display: hideall ? "block" : "none" }}>
 
-        <Zoom>
+        <div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", flexDirection: "column" }} className='login'>
             <div style={{ display: "none" }}>
               {hideall ? setTimeout(() => {
@@ -1052,7 +1051,7 @@ export const Scoring4 = () => {
             <h2>Moving towards the 2nd inning....</h2>
           </div>
 
-        </Zoom>
+        </div>
       </div>
     </FadeIn>
   )
